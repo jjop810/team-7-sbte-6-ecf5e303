@@ -14,4 +14,8 @@ public class Position {
     public Point getCoordinates(){
         return this.coordinates;
     }
+
+    public Position getPosition() {
+        return null;
+    }
 }

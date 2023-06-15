@@ -48,7 +48,7 @@ public class Character {
         }
     }
 
-    public Object getDefaultName() {
+    public String getDefaultName() {
         return DEFAULT_NAME;
     }
 
@@ -57,7 +57,7 @@ public class Character {
 
     }
 
-    public Object getName() {
+    public String getName() {
         return this.name;
     }
 
@@ -70,7 +70,7 @@ public class Character {
         this.position = position;
     }
 
-    public void move(Object northh) {
+    public void move(Object north) {
     }
     
 }
