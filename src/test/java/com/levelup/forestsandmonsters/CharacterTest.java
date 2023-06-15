@@ -13,4 +13,13 @@ public class CharacterTest {
         Character charater = new Character();
         assertEquals("Dragon",charater.getDefaultName());
     }
+
+    @Test
+    public void getCharacterPositionTest() {
+        Character character = new Character();
+        Position position = new Position(1,2);
+        character.setPosition(position);
+        assertEquals(1,character.getPosition().getCoordinates().x);
+        assertEquals(2,character.getPosition().getCoordinates().y);
+    }
 }

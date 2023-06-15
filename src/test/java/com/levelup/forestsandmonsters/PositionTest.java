@@ -1,7 +1,8 @@
+package com.levelup.forestsandmonsters;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.notNull;
 
-import com.Position;
+import com.levelup.forestsandmonsters.Position;
 
 public class PositionTest{
 

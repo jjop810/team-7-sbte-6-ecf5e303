@@ -1,9 +1,10 @@
 package com.levelup.forestsandmonsters;
-
+import com.levelup.forestsandmonsters.Position;
 public class Character {
 
     static String DEFAULT_NAME;
     String name;
+    Position position;
 
 
     Character(){
@@ -25,6 +26,15 @@ public class Character {
 
     public Object getName() {
         return this.name;
+    }
+
+    public Position getPosition() {
+        return this.position;
+
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
     
 }

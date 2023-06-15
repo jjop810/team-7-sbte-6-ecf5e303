@@ -1,4 +1,4 @@
-package com;
+package com.levelup.forestsandmonsters;
 import java.awt.Point;
 
 public class Position {
@@ -6,6 +6,7 @@ public class Position {
     private Point coordinates;
 
     public Position(int xCoordinates, int yCoordinates){
+        coordinates = new Point();
         this.coordinates.x=xCoordinates;
         this.coordinates.y=yCoordinates;
     }
