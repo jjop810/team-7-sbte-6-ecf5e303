@@ -8,11 +8,12 @@ public class GameMap {
 
 public GameMap() {
     Position startPos = new Position(0,0);
-
-    this.positions=null;
+    this.positions= new Position [10][10];
     this.startingPosition= startPos;
-    this.numPositions=0;
+    this.numPositions=100;
 }
+
+
 
 public Position [][] getPositions(){
     return this.positions;
