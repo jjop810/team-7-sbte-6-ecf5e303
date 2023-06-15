@@ -25,6 +25,9 @@ public class Character {
             case SOUTH:
             this.position.getCoordinates().y--;
                 break;
+            case EAST:
+            this.position.getCoordinates().x++;
+                break;
             default:
                 break;
         }
