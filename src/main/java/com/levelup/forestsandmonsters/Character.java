@@ -21,6 +21,9 @@ public class Character {
         switch (direction) {
             case NORTH:
             this.position.getCoordinates().y++;
+            if(this.position.getCoordinates().y > 9){
+                this.position.getCoordinates().y = 9;
+            }
                 break;
             case SOUTH:
             this.position.getCoordinates().y--;
