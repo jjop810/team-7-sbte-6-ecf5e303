@@ -26,7 +26,7 @@ public class CharacterTest {
     }
 
     @Test
-    public void characterMoveNorthTest(){
+    public void characterMoveNorthStartAt0_0Test(){
         Character character = new Character("Mover");
 
         Position position = new Position(0,0);
@@ -34,5 +34,16 @@ public class CharacterTest {
         character.move(DIRECTION.NORTH);
         assertEquals(1,character.getPosition().getCoordinates().y);
         assertEquals(0,character.getPosition().getCoordinates().x);
+    }
+
+    @Test
+    public void characterMoveSouthStartAt1_1Test(){
+        Character character = new Character("Mover");
+
+        Position position = new Position(1,1);
+        character.setPosition(position);
+        character.move(DIRECTION.SOUTH);
+        assertEquals(0,character.getPosition().getCoordinates().y);
+        assertEquals(1,character.getPosition().getCoordinates().x);
     }
 }
