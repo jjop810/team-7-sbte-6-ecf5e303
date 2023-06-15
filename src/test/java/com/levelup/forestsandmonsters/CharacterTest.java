@@ -26,24 +26,34 @@ public class CharacterTest {
     }
 
     @Test
-    public void characterMoveNorthStartAt0_0Test(){
+    public void characterMoveNorthStartAt5_5Test(){
         Character character = new Character("Mover");
 
-        Position position = new Position(0,0);
+        Position position = new Position(5,5);
         character.setPosition(position);
         character.move(DIRECTION.NORTH);
-        assertEquals(1,character.getPosition().getCoordinates().y);
-        assertEquals(0,character.getPosition().getCoordinates().x);
+        assertEquals(5,character.getPosition().getCoordinates().x);
+        assertEquals(6,character.getPosition().getCoordinates().y);
     }
 
     @Test
-    public void characterMoveSouthStartAt1_1Test(){
+    public void characterMoveSouthStartAt5_5Test(){
         Character character = new Character("Mover");
 
-        Position position = new Position(1,1);
+        Position position = new Position(5,5);
         character.setPosition(position);
         character.move(DIRECTION.SOUTH);
-        assertEquals(0,character.getPosition().getCoordinates().y);
-        assertEquals(1,character.getPosition().getCoordinates().x);
+        assertEquals(5,character.getPosition().getCoordinates().x);
+        assertEquals(4,character.getPosition().getCoordinates().y);
+    }
+    @Test
+    public void characterMoveEastStartAt5_5Test(){
+        Character character = new Character("Mover");
+
+        Position position = new Position(5,5);
+        character.setPosition(position);
+        character.move(DIRECTION.EAST);
+        assertEquals(6,character.getPosition().getCoordinates().x);
+        assertEquals(5,character.getPosition().getCoordinates().y);
     }
 }
