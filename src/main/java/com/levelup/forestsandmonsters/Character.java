@@ -72,5 +72,9 @@ public class Character {
 
     public void move(Object north) {
     }
+
+    public void enterMap(GameMap gMap) {
+        this.position = gMap.startingPosition;
+    }
     
 }
