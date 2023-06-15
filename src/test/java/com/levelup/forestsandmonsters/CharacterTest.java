@@ -56,4 +56,15 @@ public class CharacterTest {
         assertEquals(6,character.getPosition().getCoordinates().x);
         assertEquals(5,character.getPosition().getCoordinates().y);
     }
+
+    @Test
+    public void characterMoveWestStartAt5_5Test(){
+        Character character = new Character("Mover");
+
+        Position position = new Position(5,5);
+        character.setPosition(position);
+        character.move(DIRECTION.WEST);
+        assertEquals(4,character.getPosition().getCoordinates().x);
+        assertEquals(5,character.getPosition().getCoordinates().y);
+    }
 }
