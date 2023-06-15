@@ -27,12 +27,21 @@ public class Character {
                 break;
             case SOUTH:
             this.position.getCoordinates().y--;
+            if(this.position.getCoordinates().y < 0){
+                this.position.getCoordinates().y = 0;
+            }
                 break;
             case EAST:
             this.position.getCoordinates().x++;
+            if(this.position.getCoordinates().x > 9){
+                this.position.getCoordinates().x = 9;
+            }
                 break;
             case WEST:
             this.position.getCoordinates().x--;
+            if(this.position.getCoordinates().x < 0){
+                this.position.getCoordinates().x = 0;
+            }
                 break;
             default:
                 break;

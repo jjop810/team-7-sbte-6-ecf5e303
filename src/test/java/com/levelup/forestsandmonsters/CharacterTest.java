@@ -78,4 +78,37 @@ public class CharacterTest {
         assertEquals(0,character.getPosition().getCoordinates().x);
         assertEquals(9,character.getPosition().getCoordinates().y);
     }
+
+    @Test
+    public void characterMoveSouthStartAt0_0Test(){
+        Character character = new Character("Edge South");
+
+        Position position = new Position(0,0);
+        character.setPosition(position);
+        character.move(DIRECTION.SOUTH);
+        assertEquals(0,character.getPosition().getCoordinates().x);
+        assertEquals(0,character.getPosition().getCoordinates().y);
+    }
+
+    @Test
+    public void characterMoveEastStartAt9_9Test(){
+        Character character = new Character("Edge East");
+
+        Position position = new Position(9,9);
+        character.setPosition(position);
+        character.move(DIRECTION.EAST);
+        assertEquals(9,character.getPosition().getCoordinates().x);
+        assertEquals(9,character.getPosition().getCoordinates().y);
+    }
+
+    @Test
+    public void characterMoveWestStartAt0_0Test(){
+        Character character = new Character("Kanye West");
+
+        Position position = new Position(0,0);
+        character.setPosition(position);
+        character.move(DIRECTION.WEST);
+        assertEquals(0,character.getPosition().getCoordinates().x);
+        assertEquals(0,character.getPosition().getCoordinates().y);
+    }
 }
