@@ -7,6 +7,7 @@ public class Character {
     static String DEFAULT_NAME;
     String name;
     Position position;
+    GameMap gMap;
 
 
     Character(){
@@ -18,34 +19,10 @@ public class Character {
     }
 
     public void move(DIRECTION direction){
-        switch (direction) {
-            case NORTH:
-            this.position.getCoordinates().y++;
-            if(this.position.getCoordinates().y > 9){
-                this.position.getCoordinates().y = 9;
-            }
-                break;
-            case SOUTH:
-            this.position.getCoordinates().y--;
-            if(this.position.getCoordinates().y < 0){
-                this.position.getCoordinates().y = 0;
-            }
-                break;
-            case EAST:
-            this.position.getCoordinates().x++;
-            if(this.position.getCoordinates().x > 9){
-                this.position.getCoordinates().x = 9;
-            }
-                break;
-            case WEST:
-            this.position.getCoordinates().x--;
-            if(this.position.getCoordinates().x < 0){
-                this.position.getCoordinates().x = 0;
-            }
-                break;
-            default:
-                break;
+        if(this.gMap == null){
+            this.gMap = new GameMap();
         }
+        gMap.calculatePosition(this.position, direction);
     }
 
     public String getDefaultName() {
@@ -68,9 +45,6 @@ public class Character {
 
     public void setPosition(Position position) {
         this.position = position;
-    }
-
-    public void move(Object north) {
     }
 
     public void enterMap(GameMap gMap) {
