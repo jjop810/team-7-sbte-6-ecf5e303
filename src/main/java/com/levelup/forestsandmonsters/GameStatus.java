@@ -22,5 +22,11 @@ public class GameStatus {
     public Position getCurrentPosition() {
         return this.currentPosition;
     }
+
+    public String toString(){
+        return "Character name: " + this.characterName + " Current position: " + this.currentPosition.getCoordinates().x + "," + this.currentPosition.getCoordinates().y;
+        //Character name: Dragon Current position: 0,0
+    }
+    
     
 }
